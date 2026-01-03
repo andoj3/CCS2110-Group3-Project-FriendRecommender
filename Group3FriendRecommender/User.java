@@ -15,10 +15,17 @@ public class User {
         this.activities = new HashSet<>();
     }
 
+    /* Pre: interest is a non-empty string.
+       Post: the interest is added to the user's interest set and duplicates will
+       be ignored */ 
+
     public void addInterest(String interest) {
         this.interests.add(interest);
     }
 
+     /*Pre: activity is non-empty string.
+       Post: the activity is added to the user's activity set and duplicates will of course
+       be ignored */
     public void addActivity(String activity) {
         this.activities.add(activity);
     }
@@ -31,10 +38,15 @@ public class User {
         return name;
     }
 
+    /*Pre: none
+      Post: Returns the Set of interests for the user. */
     public Set<String> getInterests() {
         return interests;
     }
-
+  
+    
+    /* Pre: none
+       Post: Returns the Set of activities for the user */
     public Set<String> getActivities() {
         return activities;
     }
